@@ -36,7 +36,21 @@ void Play::run() {
 			Scene play;
 			play.getScene();
 		case 3:
-			//games
+			Hang plays;
+			Tac game;
+			int c;
+
+			cout << "1. Hangman" << endl;
+			cout << "2. Tic Tac Toe" << endl;
+			cin >> c;
+			switch (c){
+			case 1:
+				plays.runHang();
+			case 2:
+				game.run();
+			default:
+				cout << "yo" << endl;
+			}
 		case 4:
 			//Shop
 		case 5:
