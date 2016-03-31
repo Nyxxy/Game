@@ -14,6 +14,11 @@ Play::Play(){
 
 void Play::run() {
 	int selection = 0;
+	Scene play;
+	Hang go;
+	Tac game;
+	int c;
+
 	do {
 		selection = menu();
 
@@ -25,40 +30,44 @@ void Play::run() {
 				cout << "You have selected " << menus[selection].getName() << endl;
 				cout << endl;
 			}
-			continue;
 		}
 		switch (selection){
 		case 1:
-			Scene play;
 			play.setScene(1);
 			play.getScene();
-		case 2:
-			Scene play;
-			play.getScene();
-		case 3:
-			Hang plays;
-			Tac game;
-			int c;
+			//continue;
 
+		case 2:
+			play.getScene();
+			//continue;
+
+		case 3:
 			cout << "1. Hangman" << endl;
 			cout << "2. Tic Tac Toe" << endl;
 			cin >> c;
-			switch (c){
-			case 1:
-				plays.runHang();
-			case 2:
-				game.run();
-			default:
-				cout << "yo" << endl;
+			if (c == 1){
+				go.runHang();
+				continue;
 			}
+			if (c == 2){
+				game.run();
+				continue;
+			}
+
 		case 4:
 			//Shop
+
 		case 5:
 			//Stats
+
 		case 6:
 			//invintory
+
 		case 7:
 			return;
+
+		default:
+			continue;
 		}
 
 		cout << "Invalid option" << endl;

@@ -1,31 +1,21 @@
-﻿Build started 3/30/2016 11:32:49 AM.
+﻿Build started 3/31/2016 10:37:28 AM.
      1>Project "\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Games.cpp Main.cpp Play.cpp Scene.cpp
-         Scene.cpp
-         Play.cpp
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(36): error C2086: 'Scene play' : redefinition
-                 \\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(32) : see declaration of 'play'
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(39): error C2065: 'Hang' : undeclared identifier
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(39): error C2146: syntax error : missing ';' before identifier 'play'
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(40): error C2065: 'Tac' : undeclared identifier
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(40): error C2146: syntax error : missing ';' before identifier 'game'
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(40): error C2065: 'game' : undeclared identifier
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(48): error C2039: 'runHang' : is not a member of 'Scene'
-                 \\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\scene.h(3) : see declaration of 'Scene'
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(50): error C2065: 'game' : undeclared identifier
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(50): error C2228: left of '.run' must have class/struct/union
-                 type is 'unknown-type'
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(72): warning C4018: '<' : signed/unsigned mismatch
-         Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Games.cpp
          Games.cpp
      1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\games.cpp(16): warning C4018: '<' : signed/unsigned mismatch
      1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\games.cpp(21): warning C4018: '<' : signed/unsigned mismatch
      1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\games.cpp(32): warning C4018: '<' : signed/unsigned mismatch
      1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\games.cpp(73): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Generating Code...
-     1>Done Building Project "\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Game\Game.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.lib" /MACHINE:X86 Debug\Games.obj
+         Debug\Main.obj
+         Debug\Menu.obj
+         Debug\Play.obj
+         Debug\Scene.obj
+         Game.vcxproj -> \\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.exe
+     1>Done Building Project "\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Game\Game.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.30
+Time Elapsed 00:00:02.46

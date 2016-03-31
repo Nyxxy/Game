@@ -2,7 +2,7 @@
 #include <ctime>
 #include <iostream>
 
-//game
+//Hang
 
 void Hang::runHang() {
 	do {
@@ -56,13 +56,13 @@ void Hang::runHang() {
 		cout << "Continue [y/n]? ";
 		cin >> letter;
 		if (letter == 'y') {
-			continue;
+			conti;
 		}
 		else {
-			break;
+			conti = false;
 		}
 
-	} while (true);
+	} while (conti);
 }
 
 
@@ -188,11 +188,10 @@ Tac::Tac() {
 
 void Tac::run() {
 	int x, y;
+		cout << "make sure to grab a friend to play against!" << endl;
 	do {
-		for (int p = 0; p < 2; p++) {
-			cout << "Player 1: " << players[0].getWins() << endl;
-			cout << "Player 2: " << players[1].getWins() << endl;
 
+		for (int p = 0; p < 2; p++) {
 			map.display();
 			cout << "Player " << p + 1 << " pick a position" << endl;
 			cin >> x >> y;
@@ -208,16 +207,8 @@ void Tac::run() {
 				else {
 					players[0].lose();
 				}
-				char letter;
+				
 				map.reset();
-				cout << "Continue [y/n]? ";
-				cin >> letter;
-				if (letter == 'y') {
-					true;
-				}
-				else {
-					false;
-				}
 			}
 		}
 		if (map.draw()) {
@@ -225,7 +216,17 @@ void Tac::run() {
 			players[1].draw();
 			map.reset();
 		}
-	} while (true);
+					
+	} while (conti);
+	char letter;
+	cout << "Continue [y/n]? ";
+	cin >> letter;
+	if (letter == 'y') {
+		conti = true;
+	}
+	else {
+		conti = false;
+	}
 }
 
 Player::Player(char v) {
@@ -289,8 +290,6 @@ bool Map::hasWon(Player p) {
 			grid[x][2] == p.getKey())
 			return true;
 	}
-
-
 
 	for (int y = 0; y < 3; y++) {
 		if (grid[0][y] == p.getKey() &&

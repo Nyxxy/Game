@@ -22,6 +22,7 @@ private:
 	int guess;
 	int hcoin;
 	WordBank bank;
+	bool conti;
 public:
 	void runHang();
 };
@@ -67,6 +68,7 @@ private:
 	Player players[2];
 	Map map;
 	int tcoin;
+	bool conti;
 public:
 	Tac();
 	void run();
