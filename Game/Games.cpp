@@ -204,7 +204,7 @@ Tac::Tac() {
 void Tac::run() {
 	int x, y;
 		cout << "make sure to grab a friend to play against!" << endl;
-	while (true){
+	do {
 		for (int p = 0; p < 2; p++) {
 			map.display();
 			cout << "Player " << p + 1 << " pick a position" << endl;
@@ -224,10 +224,10 @@ void Tac::run() {
 				cout << "Continue [y/n]? ";
 				cin >> letter;
 				if (letter == 'y') {
-				 true;
+				 conti = true;
 				}
 				else {
-				 false;
+				 conti = false;
 				}
 			}
 		
@@ -237,7 +237,7 @@ void Tac::run() {
 			map.reset();
 		}
 		}			
-	}
+	} while (conti);
 }
 
 Player::Player(char v) {
