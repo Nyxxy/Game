@@ -4,7 +4,15 @@
 
 using namespace std;
 
-
+class gameMenu{
+private:
+	int coins;
+public:
+	int getGames();
+	void runGames();
+	int getCoins();
+	void setCoins();
+};
 //hangman
 
 class WordBank {

@@ -2,6 +2,21 @@
 #include <ctime>
 #include <iostream>
 
+//Game Menu
+/*int gameMenu::getGames(){
+	cout << "1. Hangman" << endl;
+	cout << "2. Tic Tac Toe  (Two Players)" << endl;
+	int s;
+	cin >> s;
+	return s;
+}
+
+void gameMenu::runGames(){
+
+}
+
+*/
+
 //Hang
 
 void Hang::runHang() {
@@ -56,7 +71,7 @@ void Hang::runHang() {
 		cout << "Continue [y/n]? ";
 		cin >> letter;
 		if (letter == 'y') {
-			conti;
+			conti = true;
 		}
 		else {
 			conti = false;
@@ -189,43 +204,39 @@ Tac::Tac() {
 void Tac::run() {
 	int x, y;
 		cout << "make sure to grab a friend to play against!" << endl;
-	do {
-
+	while (true){
 		for (int p = 0; p < 2; p++) {
 			map.display();
 			cout << "Player " << p + 1 << " pick a position" << endl;
-			cin >> x >> y;
+			cout << "x:";
+			cin >> x;
+			cout << "y:";
+			cin >> y;
 
 			map.setKey(players[p], x - 1, y - 1);
 			if (map.hasWon(players[p])) {
 				cout << "Player " << p + 1 << " wins!!!!" << endl;
 				tcoin = tcoin + 5;
-				players[p].win();
-				if (p == 0) {
-					players[1].lose();
+				players[p].win();	
+				map.reset();
+				char letter;
+
+				cout << "Continue [y/n]? ";
+				cin >> letter;
+				if (letter == 'y') {
+				 true;
 				}
 				else {
-					players[0].lose();
+				 false;
 				}
-				
-				map.reset();
 			}
-		}
+		
 		if (map.draw()) {
 			players[0].draw();
 			players[1].draw();
 			map.reset();
 		}
-					
-	} while (conti);
-	char letter;
-	cout << "Continue [y/n]? ";
-	cin >> letter;
-	if (letter == 'y') {
-		conti = true;
-	}
-	else {
-		conti = false;
+		}			
 	}
 }
 

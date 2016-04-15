@@ -14,6 +14,7 @@ Play::Play(){
 
 void Play::run() {
 	int selection = 0;
+	Play get;
 	Scene play;
 	Hang go;
 	Tac game;
@@ -58,7 +59,7 @@ void Play::run() {
 			//Shop
 
 		case 5:
-			//Stats
+			get.getStats();
 
 		case 6:
 			//invintory
@@ -86,4 +87,11 @@ int Play::menu() {
 	int s;
 	cin >> s;
 	return s;
+}
+
+void Play::getStats(){
+	cout << "Good: " << good << endl;
+	cout << "Neutral: " << neutral << endl;
+	cout << "Bad: " << bad << endl;
+//	cout << "Coins: " << coins << endl;
 }
