@@ -2,9 +2,11 @@
 
 class Scene{
 private:
-	int scene;
+	double scene;
 public:
-	void setScene(int newScene);
+	Scene();
+	Scene(double newScene);
+	void setScene(double newScene);
 	int getScene();
 	void setNextScene();
 };

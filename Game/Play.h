@@ -4,7 +4,7 @@
 
 class Play{
 private:
-	Menu menus[7];
+	Menu menus[8];
 	int good=0;
 	int bad=0;
 	int neutral=0;

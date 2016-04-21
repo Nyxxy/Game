@@ -8,8 +8,9 @@ Play::Play(){
 	menus[2].setName("Mini Games");
 	menus[3].setName("Shop");
 	menus[4].setName("View Stats");
-	menus[5].setName("Invintory");
+	menus[5].setName("Inventory");
 	menus[6].setName("Exit");
+	menus[7].setName("An Invaid Option");
 }
 
 void Play::run() {
@@ -22,26 +23,27 @@ void Play::run() {
 
 	do {
 		selection = menu();
-
-		if (selection >0 && selection < 6) {
+		
 			selection--;
 
+		if (selection >= 0 && selection <= 8) {
 			if (menus[selection].makeSelection()) {
 				cout << endl;
 				cout << "You have selected " << menus[selection].getName() << endl;
 				cout << endl;
 			}
 		}
-		switch (selection){
+		
+		switch (selection + 1){
 		case 1:
 			play.setScene(1);
 			play.getScene();
 			//continue;
-
+			break;
 		case 2:
 			play.getScene();
 			//continue;
-
+			break;
 		case 3:
 			cout << "1. Hangman" << endl;
 			cout << "2. Tic Tac Toe" << endl;
@@ -54,30 +56,28 @@ void Play::run() {
 				game.run();
 				continue;
 			}
-
+			break;
 		case 4:
-			//Shop
-
+			// shop
+			break;
 		case 5:
-			get.getStats();
-
+			//get.getStats();
+			break;
 		case 6:
-			//invintory
-
+			// invintory
+			break;
 		case 7:
 			return;
-
-		default:
-			continue;
+		case 8:
+			break;
 		}
-
-		cout << "Invalid option" << endl;
 	} while (true);
 }
 
 
 int Play::menu() {
-	for (int i = 0; i < 6; i++) {
+		cout << endl;
+	for (int i = 0; i < 7; i++) {
 		cout << i + 1 << ". " << menus[i].getName();
 		for (int s = 0; s < (30 - menus[i].getName().length()); s++) {
 			cout << " ";
@@ -86,12 +86,18 @@ int Play::menu() {
 	}
 	int s;
 	cin >> s;
-	return s;
+	cout << endl;
+	if (s >= 1 && s <= 8){
+		return s;
+	}
+	else{
+		return 8;
+	}
 }
 
 void Play::getStats(){
 	cout << "Good: " << good << endl;
 	cout << "Neutral: " << neutral << endl;
 	cout << "Bad: " << bad << endl;
-//	cout << "Coins: " << coins << endl;
+	//	cout << "Coins: " << coins << endl;
 }
