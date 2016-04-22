@@ -6,13 +6,9 @@ class Menu{
 private:
 	string name;
 public:
-
 	Menu();
 	Menu(string newName);
-
 	string getName();
-
 	void setName(string newName);
-
 	bool makeSelection();
 };

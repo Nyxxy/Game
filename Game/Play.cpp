@@ -1,5 +1,6 @@
 #include "Play.h"
 #include "Scene.h"
+#include "Stats.h"
 #include <iostream>
 
 Play::Play(){
@@ -19,6 +20,8 @@ void Play::run() {
 	Scene play;
 	Hang go;
 	Tac game;
+	Stats display;
+
 	int c;
 
 	do {
@@ -61,10 +64,10 @@ void Play::run() {
 			// shop
 			break;
 		case 5:
-			//get.getStats();
+			display.getStats();
 			break;
 		case 6:
-			// invintory
+			// inventory
 			break;
 		case 7:
 			return;
@@ -93,11 +96,4 @@ int Play::menu() {
 	else{
 		return 8;
 	}
-}
-
-void Play::getStats(){
-	cout << "Good: " << good << endl;
-	cout << "Neutral: " << neutral << endl;
-	cout << "Bad: " << bad << endl;
-	//	cout << "Coins: " << coins << endl;
 }

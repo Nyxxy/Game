@@ -4,15 +4,6 @@
 
 using namespace std;
 
-class gameMenu{
-private:
-	int coins;
-public:
-	int getGames();
-	void runGames();
-	int getCoins();
-	void setCoins();
-};
 //hangman
 
 class WordBank {
@@ -28,7 +19,7 @@ class Hang {
 private:
 	string word, display;
 	int guess;
-	int hcoin;
+	bool win;
 	WordBank bank;
 	bool conti;
 public:
@@ -51,12 +42,8 @@ public:
 
 	void win();
 	void lose();
-	void draw();
 private:
 	char key;
-	int wins;
-	int losses;
-	int games;
 };
 
 class Map {
@@ -75,7 +62,6 @@ class Tac {
 private:
 	Player players[2];
 	Map map;
-	int tcoin;
 	bool conti;
 public:
 	Tac();
