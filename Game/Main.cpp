@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Play.h"
+#include "Stats.h"
 
 using namespace std;
 

@@ -23,7 +23,7 @@ private:
 	WordBank bank;
 	bool conti;
 public:
-	void runHang();
+	bool runHang();
 };
 
 
@@ -65,6 +65,6 @@ private:
 	bool conti;
 public:
 	Tac();
-	void run();
+	bool run();
 };
 

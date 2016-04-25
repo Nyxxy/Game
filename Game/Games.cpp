@@ -5,7 +5,7 @@
 
 //Hang
 
-void Hang::runHang() {
+bool Hang::runHang() {
 	Stats displa;
 	guess = 0;
 	word = bank.getWord();
@@ -40,24 +40,19 @@ void Hang::runHang() {
 		if (display != word) {
 			cout << "Game over" << endl;
 			cout << "The word is " << word << endl;
-			cout << "Continue [y/n]? ";
+			cout << "continue? [y/n]" << endl;
+			char letter;
 			cin >> letter;
-			if (letter == 'y') {
+			if (letter == 'y'){
 				conti = true;
 			}
-			else {
-				conti = false;
+			else{
+				return false;
 			}
 		}
-		else {
+		if (display == word){
 			cout << "You won!" << endl;
-			displa.setCoins(5);
-			if (letter == 'y') {
-				conti = true;
-			}
-			else {
-				conti = false;
-			}
+			return true;
 		}
 
 	}
@@ -184,14 +179,14 @@ Tac::Tac() {
 	players[1] = Player('O');
 }
 
-void Tac::run() {
+bool Tac::run() {
 	Stats display;
 	int x, y;
 	cout << "Grab a Friend! You are Player one. They are Player two!" << endl;
 	while (conti){
-		conti = true;
 		for (int p = 0; p < 2; p++) {
 			map.display();
+
 			cout << "Player " << p + 1 << " pick a position" << endl;
 			cout << "x:";
 			cin >> x;
@@ -202,19 +197,8 @@ void Tac::run() {
 			if (map.hasWon(players[p])) {
 				cout << "Player " << p + 1 << " wins!!!!" << endl;
 				map.reset();
-				char letter;
-
-				cout << "Continue [y/n]? ";
-				cin >> letter;
-				if (letter == 'y') {
-					conti = true;
-				}
-				else {
-					conti = false;
-				}
-				if (map.hasWon(players[1])){
-					display.setCoins(1);
-				}
+					return true;	
+					break;
 			}
 		}
 	}

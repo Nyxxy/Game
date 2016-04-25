@@ -9,6 +9,7 @@ void Stats::getStats(){
 	cout << "Neutral: " << getNeutral() << endl;
 	cout << "Coins: " << getCoins() << endl;
 }
+
 int Stats::getGood(){
 	return good;
 }
