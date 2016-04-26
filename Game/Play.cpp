@@ -53,19 +53,18 @@ void Play::run() {
 			cin >> c;
 			if (c == 1){
 				go.runHang();
+				break;
 				if (go.runHang()){
 					display.setCoins(5);
 				}
-				continue;
 			}
 			if (c == 2){
 				game.run();
+				break;
 				if (game.run()){
 					display.setCoins(1);
 				}
-				continue;
 			}
-			break;
 		case 4:
 			// shop
 			break;

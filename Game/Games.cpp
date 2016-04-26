@@ -11,13 +11,11 @@ bool Hang::runHang() {
 	word = bank.getWord();
 	display = word;
 	char letter;
-	conti = true;
 
-	while (conti){
 		for (int i = 0; i < display.length(); i++) {
 			display[i] = '_';
 		}
-		do {
+		while (guess < 6 && display != word) {
 			for (int i = 0; i < display.length(); i++) {
 				cout << display[i] << " ";
 			}
@@ -36,26 +34,16 @@ bool Hang::runHang() {
 				cout << "Incorrect!" << endl;
 				guess++;
 			}
-		} while (guess < 6 && display != word);
+		}
 		if (display != word) {
 			cout << "Game over" << endl;
 			cout << "The word is " << word << endl;
-			cout << "continue? [y/n]" << endl;
-			char letter;
-			cin >> letter;
-			if (letter == 'y'){
-				conti = true;
-			}
-			else{
-				return false;
-			}
+			return false;
 		}
 		if (display == word){
-			cout << "You won!" << endl;
+			cout << word << "! You won!" << endl;
 			return true;
 		}
-
-	}
 }
 
 
