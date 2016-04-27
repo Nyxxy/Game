@@ -51,18 +51,22 @@ void Play::run() {
 			cout << "1. Hangman" << endl;
 			cout << "2. Tic Tac Toe" << endl;
 			cin >> c;
-			if (c == 1){
-				go.runHang();
-				break;
+			if (c == 1){				
 				if (go.runHang()){
 					display.setCoins(5);
+					break;
+				}
+				else{
+					break;
 				}
 			}
 			if (c == 2){
-				game.run();
-				break;
 				if (game.run()){
 					display.setCoins(1);
+					break;
+				}
+				else{
+					break;
 				}
 			}
 		case 4:
