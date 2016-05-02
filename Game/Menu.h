@@ -11,4 +11,10 @@ public:
 	string getName();
 	void setName(string newName);
 	bool makeSelection();
+	void runSceneone();
+	void runSceneconti();
+	void runGames();
+	void runShop();
+	void runStats();
+	void runInvintory();
 };

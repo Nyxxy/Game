@@ -1,0 +1,5 @@
+/You are approched by a Red haired man, and you see the bald man look over to you as if to watch what you do./
+"???:Havent seen you before. By chance are you new around here? "<<endl;
+	1. Lie	
+	2. Anwser honestly
+	3. Be sarcastic

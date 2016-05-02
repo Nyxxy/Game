@@ -1,9 +1,8 @@
-﻿Build started 4/27/2016 11:08:01 AM.
+﻿Build started 5/2/2016 10:32:55 AM.
      1>Project "\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Play.cpp
-         Play.cpp
-     1>\\dav.edu\students\hs16$\mjgibbs36\my documents\visual studio 2013\projects\game\game\play.cpp(94): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Menu.cpp
+         Menu.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.lib" /MACHINE:X86 Debug\Games.obj
          Debug\Invintory.obj
@@ -13,9 +12,10 @@
          Debug\Scene.obj
          Debug\Shop.obj
          Debug\Stats.obj
+     1>Games.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
          Game.vcxproj -> \\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Debug\Game.exe
      1>Done Building Project "\\dav.edu\Students\HS16$\mjgibbs36\My Documents\Visual Studio 2013\Projects\Game\Game\Game.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.01
+Time Elapsed 00:00:03.19

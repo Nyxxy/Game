@@ -9,5 +9,4 @@ public:
 	Play();
 	void run();
 	int menu();
-	void getStats();
 };

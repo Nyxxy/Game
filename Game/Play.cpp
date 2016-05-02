@@ -3,6 +3,8 @@
 #include "Stats.h"
 #include <iostream>
 
+Menu run;
+
 Play::Play(){
 	menus[0].setName("New");
 	menus[1].setName("Continue");
@@ -16,17 +18,10 @@ Play::Play(){
 
 void Play::run() {
 	int selection = 0;
-	Play get;
-	Scene play;
-	Hang go;
-	Tac game;
-	Stats display;
-
-	int c;
+	Menu run;
 
 	do {
-		selection = menu();
-		
+		selection = menu();		
 			selection--;
 
 		if (selection >= 0 && selection <= 8) {
@@ -39,41 +34,16 @@ void Play::run() {
 		
 		switch (selection + 1){
 		case 1:
-			play.setScene(1);
-			play.getScene();
-			//continue;
 			break;
 		case 2:
-			play.getScene();
-			//continue;
 			break;
 		case 3:
-			cout << "1. Hangman" << endl;
-			cout << "2. Tic Tac Toe" << endl;
-			cin >> c;
-			if (c == 1){				
-				if (go.runHang()){
-					display.setCoins(5);
-					break;
-				}
-				else{
-					break;
-				}
-			}
-			if (c == 2){
-				if (game.run()){
-					display.setCoins(1);
-					break;
-				}
-				else{
-					break;
-				}
-			}
+			run.runGames();
 		case 4:
 			// shop
 			break;
 		case 5:
-			display.getStats();
+			run.runStats();
 			break;
 		case 6:
 			// inventory

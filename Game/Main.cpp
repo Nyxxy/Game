@@ -37,55 +37,9 @@ int main(){
 
 
 
-
-
-
-/*int main(){
-	int evil = 0;
-	int good = 0;
-	int neutral = 0;
-	string name;
-	//double scene;
-	int you = 0;
-
-	//menu
-		//
-
-	//character info
-		//name
-		//gender
-		//age   
-
-	//scene 1
-	cout << "/Welcome to Hell./" << endl;
-	cout << "/There are two kinds of people:/" << endl;
-	cout << "/1. Those who know they will stay here forever/" << endl;
-	cout << "/2. Those who try to get out/" << endl;
-	cout << endl;
-	cout << "/Which are you?/" << endl;
-	cout << endl;
-	cout << "(1, 2, 3)" << endl;
-	cout << endl;
-
-	cin >> you;
-	switch (you) {
-	case 1:
-		cout << endl;
-		cout << "/Follow the red haired man. He'll be more than happy to show you around./" << endl;
-		evil++;
-		break;
-	case 2:
-		cout << endl;
-		cout << "/Then you want to go over there, where you see the bald man. But word from the wise, He's been looking for a way out for a long time./" << endl;
-		good++;
-		break;
-	case 3:
-		cout << endl;
-		cout << "Mhm. If you say so." << endl;
-		neutral++;
-		break;
+/*
 	}
-	//scene 1.2
+	//scene 1.0
 	if (evil >= 1){
 		cout << "/You are approched by the Red haired man who was pointed out to you/" << endl;
 		cout << "???:Havent seen you before. By chance are you new around here? "<<endl;
@@ -112,7 +66,7 @@ int main(){
 			cout <<" Yes, I can show you around." << endl;
 			evil++;
 		}
-		//scene 1.3 
+		//scene 0.1 
 		if (good >= 1){
 			cout << "/You approch the bald man who was pointed out to you/" << endl;
 			cout << "1. Be polite" << endl;

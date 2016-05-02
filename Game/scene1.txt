@@ -1,8 +1,0 @@
-/Welcome to Hell.
-/There are two kinds of people here.
-/1. Those who know they will stay here forever/
-/2. Those who try to get out/
-
-/Which are you?/
-
-"(1, 2, 3)"
