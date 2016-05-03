@@ -7,7 +7,7 @@
 
 Stats display;
 Hang go;
-Tac game;
+Tac gam;
 
 Menu::Menu(){
 	name = "blank";
@@ -37,7 +37,6 @@ void Menu::runSceneconti(){
 }
 void Menu::runGames(){
 	int c;
-	//do{
 		cout << "1. Hangman" << endl;
 		cout << "2. Tic Tac Toe" << endl;
 		cin >> c;
@@ -47,12 +46,11 @@ void Menu::runGames(){
 			}
 		}
 		if (c == 2){
-				if (game.run()){
-					display.setCoins(1);
-				}
+			if (gam.run()){
+				display.setCoins(1);
+			}
 
 		}
-	//}while (true);
 } 
 
 void Menu::runShop(){

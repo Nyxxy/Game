@@ -170,6 +170,7 @@ Tac::Tac() {
 bool Tac::run() {
 	Stats display;
 	int x, y;
+	conti = true;
 	cout << "Grab a Friend! You are Player one. They are Player two!" << endl;
 	while (conti){
 		for (int p = 0; p < 2; p++) {
@@ -186,7 +187,10 @@ bool Tac::run() {
 				cout << "Player " << p + 1 << " wins!!!!" << endl;
 				map.reset();
 					return true;	
-					break;
+					conti = false;
+			}
+			else{
+				continue;
 			}
 		}
 	}
