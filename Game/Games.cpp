@@ -31,8 +31,11 @@ bool Hang::runHang() {
 				}
 			}
 			if (!found) {
-				cout << "Incorrect!" << endl;
+				cout << "Incorrect!" << endl << endl;
 				guess++;
+			}
+			if (found){
+				cout << "Correct!" << endl << endl;
 			}
 		}
 		if (display != word) {
@@ -41,7 +44,7 @@ bool Hang::runHang() {
 			return false;
 		}
 		if (display == word){
-			cout << word << "! You won!" << endl;
+			cout << "The word was " << word << "! You won!" << endl << endl;
 			return true;
 		}
 }

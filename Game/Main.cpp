@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 	Play go;
-	cout << "Welcome to Hell" << endl;
+	cout << "Welcome to Hell" << endl << endl;
 
 	go.run();
 

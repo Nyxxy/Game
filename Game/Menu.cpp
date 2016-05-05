@@ -61,6 +61,7 @@ void Menu::runShop(){
 	cout << "4 10g Super Good up (5 points)" << endl;
 	cout << "5 10g Super Bad up (5 points)" << endl;
 	cout << "6 10g Super Neutral up (5 points)" << endl;
+	cout << "7 Back to Main Menu" << endl;
 	cin >> i;
 	switch (i){
 	case 1:{

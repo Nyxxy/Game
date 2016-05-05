@@ -48,7 +48,7 @@ void Play::run() {
 		case 6:
 			return;
 		case 7:
-			cout << "You Loser, Type Something thats on the Menu not random numbers!" << endl;
+			cout << "Hey Loser, Type Something thats on the Menu not random numbers!" << endl;
 			break;
 		}
 	} while (true);
@@ -57,6 +57,7 @@ void Play::run() {
 
 int Play::menu() {
 		cout << endl;
+		cout << "Main Menu" << endl << endl;
 	for (int i = 0; i < 6; i++) {
 		cout << i + 1 << ". " << menus[i].getName();
 		for (int s = 0; s < (30 - menus[i].getName().length()); s++) {
