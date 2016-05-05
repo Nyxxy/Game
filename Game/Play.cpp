@@ -11,9 +11,8 @@ Play::Play(){
 	menus[2].setName("Mini Games");
 	menus[3].setName("Shop");
 	menus[4].setName("View Stats");
-	menus[5].setName("Inventory");
-	menus[6].setName("Exit");
-	menus[7].setName("An Invaid Option");
+	menus[5].setName("Exit");
+	menus[6].setName("An Invaid Option");
 }
 
 void Play::run() {
@@ -39,18 +38,17 @@ void Play::run() {
 			break;
 		case 3:
 			run.runGames();
+			break;
 		case 4:
-			// shop
+			run.runShop();
 			break;
 		case 5:
 			run.runStats();
 			break;
 		case 6:
-			// inventory
-			break;
-		case 7:
 			return;
-		case 8:
+		case 7:
+			cout << "You Loser, Type Something thats on the Menu not random numbers!" << endl;
 			break;
 		}
 	} while (true);
@@ -59,7 +57,7 @@ void Play::run() {
 
 int Play::menu() {
 		cout << endl;
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < 6; i++) {
 		cout << i + 1 << ". " << menus[i].getName();
 		for (int s = 0; s < (30 - menus[i].getName().length()); s++) {
 			cout << " ";
@@ -69,7 +67,7 @@ int Play::menu() {
 	int s;
 	cin >> s;
 	cout << endl;
-	if (s >= 1 && s <= 8){
+	if (s >= 1 && s <= 6){
 		return s;
 	}
 	else{
